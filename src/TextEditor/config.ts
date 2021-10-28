@@ -1,9 +1,8 @@
+import { DefaultDraftBlockRenderMap, DraftEditorCommand } from "draft-js";
 import Immutable from "immutable";
-import { DefaultDraftBlockRenderMap } from "draft-js";
-import { DraftEditorCommand } from "draft-js";
 
 /**возвращаемый тип для Key Bindings*/
-export type KeyCommand = DraftEditorCommand | 'accent'
+export type KeyCommand = DraftEditorCommand | "accent";
 
 export enum BlockType {
   /* Заголовки */
@@ -39,20 +38,20 @@ export const CUSTOM_BLOCK_RENDER_MAP = Immutable.Map({
     element: "city",
   },
   [BlockType.h1]: {
-    element: "header-one"
-  }
+    element: "header-one",
+  },
 });
 
 export const CUSTOM_INLINE_MAP = {
   [InlineStyle.ACCENT]: {
-    backgroundColor: '#F7F6F3',
-    color: '#A41E68',
+    backgroundColor: "#F7F6F3",
+    color: "#A41E68",
   },
   [InlineStyle.BOLD]: {
     fontSize: "25px",
     color: "red",
-  }
-}
+  },
+};
 
 export const BLOCK_RENDER_MAP = DefaultDraftBlockRenderMap.merge(
   CUSTOM_BLOCK_RENDER_MAP

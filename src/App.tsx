@@ -1,7 +1,6 @@
-import TextEditor from './TextEditor';
+import TextEditor from "./TextEditor";
 import { TextEditorProvider } from "./TextEditor/context";
-import ToolPanel from './TextTool/ToolPanel';
-
+import ToolPanel from "./TextTool/ToolPanel";
 
 const App = () => {
   return (
@@ -9,8 +8,7 @@ const App = () => {
       <ToolPanel />
       <TextEditor />
     </TextEditorProvider>
-
-  )
-}
+  );
+};
 
 export default App;

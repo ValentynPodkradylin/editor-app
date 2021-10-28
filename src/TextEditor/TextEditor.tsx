@@ -1,10 +1,10 @@
-import React, { FC } from 'react';
-import { Editor } from 'draft-js';
-import { useEditorApi } from './context';
-import { BLOCK_RENDER_MAP, CUSTOM_INLINE_MAP, } from './config';
-import { Box } from '@chakra-ui/layout';
+import { Box } from "@chakra-ui/layout";
+import { Editor } from "draft-js";
+import { FC } from "react";
+import { BLOCK_RENDER_MAP, CUSTOM_INLINE_MAP } from "./config";
+import { useEditorApi } from "./context";
 
-interface ITextEditorProps { }
+interface ITextEditorProps {}
 
 const TextEditor: FC<ITextEditorProps> = (props) => {
   const {} = props;
@@ -20,8 +20,7 @@ const TextEditor: FC<ITextEditorProps> = (props) => {
         handleKeyCommand={editorApi.handleKeyCommand}
       />
     </Box>
-
   );
-}
+};
 
 export default TextEditor;
